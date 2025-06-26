@@ -1,1 +1,4 @@
-
+CREATE TABLE Aluno_festival (
+	mat_aluno_pk VARCHAR(15) PRIMARY KEY,
+    nome_aluno VARCHAR(100) NOT NULL
+);
