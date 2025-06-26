@@ -1,17 +1,11 @@
-CREATE TABLE Aluno_festival (
+CREATE TABLE Festival_aluno (
 	mat_aluno_pk VARCHAR(15) PRIMARY KEY,
     nome_aluno VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE Professor_festival (
+CREATE TABLE Festival_professor (
 	mat_prof_pk INT PRIMARY KEY,
     nome_prof VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE Festival_festival (
-	ano_festival_pk INT PRIMARY KEY,
-    tema_festival VARCHAR(45) NOT NULL,
-    dt_inicio_festival DATE NOT NULL
 );
 
 CREATE TABLE Festival_festival (
@@ -21,7 +15,7 @@ CREATE TABLE Festival_festival (
     dt_fim_festival DATE NOT NULL
 );
 
-CREATE TABLE Tp_apresentacao (
+CREATE TABLE Festival_tp_apresentacao (
 	id_tp_apresentacao_pk INT PRIMARY KEY,
     nome_tp_apresentacao VARCHAR(45) NOT NULL
 );
