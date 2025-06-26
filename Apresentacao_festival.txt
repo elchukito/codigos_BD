@@ -32,3 +32,13 @@ CREATE TABLE Festival_apresentacao (
     FOREIGN KEY ( id_tp_apresentacao_apresentacao_fk) REFERENCES Festival_tp_apresentacao( id_tp_apresentacao_pk),
     FOREIGN KEY ( ano_festival_apresentacao_fk) REFERENCES Festival_festival( ano_festival_pk)
 );
+
+CREATE TABLE Festival_professor_apresentacao (
+	professor_mat_prof_apr_pk INT NOT NULL,
+    apresentacao_id_prof_apr_pk INT NOT NULL,
+    nota_prof_apr DECIMAL(2,2),
+    
+    PRIMARY KEY ( professor_mat_prof_apr_pk, apresentacao_id_prof_apr_pk),
+    FOREIGN KEY ( professor_mat_prof_apr_pk) REFERENCES Festival_professor( mat_prof_pk),
+    FOREIGN KEY ( apresentacao_id_prof_apr_pk) REFERENCES Festival_apresentacao( id_apresentacao_pk)
+);
