@@ -7,3 +7,16 @@ CREATE TABLE Professor_festival (
 	mat_prof_pk INT PRIMARY KEY,
     nome_prof VARCHAR(100) NOT NULL
 );
+
+CREATE TABLE Festival_festival (
+	ano_festival_pk INT PRIMARY KEY,
+    tema_festival VARCHAR(45) NOT NULL,
+    dt_inicio_festival DATE NOT NULL
+);
+
+CREATE TABLE Festival_festival (
+	ano_festival_pk INT PRIMARY KEY,
+    tema_festival VARCHAR(45) NOT NULL,
+    dt_inicio_festival DATE NOT NULL,
+    dt_fim_festival DATE NOT NULL
+);
