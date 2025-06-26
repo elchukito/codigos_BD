@@ -25,3 +25,16 @@ CREATE TABLE Tp_apresentacao (
 	id_tp_apresentacao_pk INT PRIMARY KEY,
     nome_tp_apresentacao VARCHAR(45) NOT NULL
 );
+
+CREATE TABLE Festival_apresentacao (
+	id_apresentacao_pk INT PRIMARY KEY,
+    nome_apresentacao VARCHAR(100) NOT NULL,
+    dt_inicio_apresentacao DATETIME NOT NULL,
+    dt_fim_apresentacao DATETIME,
+    duracao_apresentacao INT NOT NULL,
+    id_tp_apresentacao_apresentacao_fk INT NOT NULL,
+    ano_festival_apresentacao_fk INT NOT NULL,
+    
+    FOREIGN KEY ( id_tp_apresentacao_apresentacao_fk) REFERENCES Festival_tp_apresentacao( id_tp_apresentacao_pk),
+    FOREIGN KEY ( ano_festival_apresentacao_fk) REFERENCES Festival_festival( ano_festival_pk)
+);
