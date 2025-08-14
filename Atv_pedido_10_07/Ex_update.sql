@@ -11,7 +11,6 @@ JOIN pedido_Produto AS p ON ip.id_produto_fk = p.id_produto_pk
 SET ip.preco_unitario_ip = p.preco
 WHERE ip.id_pedido_fk BETWEEN 1 AND 10;
 
--- incompleto
 UPDATE pedido_Produto
 SET nome_produto = nome_produto
 WHERE nome_produto = '%"';
