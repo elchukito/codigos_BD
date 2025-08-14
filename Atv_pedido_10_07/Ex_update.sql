@@ -13,7 +13,7 @@ WHERE ip.id_pedido_fk BETWEEN 1 AND 10;
 
 UPDATE pedido_Produto
 SET nome_produto = nome_produto
-WHERE nome_produto = '%"';
+WHERE nome_produto LIKE '%"';
 
 UPDATE pedido_Produto
 SET preco = preco - 20
