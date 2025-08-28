@@ -16,6 +16,12 @@ FROM aval_futsal_jogador jogador
 JOIN aval_futsal_posicao_jogador posicao ON posicao.id_jogador_fk = jogador.id_jogador_pk
 WHERE posicao.posicao = 'fixo';
 
+-- questao 4
+SELECT treino.data
+FROM aval_futsal_treino AS treino
+JOIN aval_futsal_desempenho_treino AS desempenho ON desempenho.id_treino_fk = treino.id_treino_pk
+WHERE desempenho.id_jogador_fk = 8 AND desempenho.presenca = FALSE;
+
 -- questao 5
 SELECT jogador.nome, COUNT(*) AS faltas
 FROM aval_futsal_treino AS treino
